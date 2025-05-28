@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Kago's E-Bakery</title>
+    <link rel="shortcut icon" href="../Cake Pics/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="hero.css" />
+  </head>
+
+  <body>
+    <div class="background">
+      <img class="bg1-img" src="../Hero+Navbar/BG.png" alt="" />
+    </div>
+    <nav class="navbar">
+      <div class="top-left">
+        <img class="logo-img" src="Logo.png" alt="" />
+        <div class="logo">
+          <a href="../Hero+Navbar/hero.html"><u>KAGO'S E-BAKERY</u></a>
+        </div>
+      </div>
+      <ul class="link-group">
+        <li class="link">
+          <a href="../Hero+Navbar/hero.html"><b>HOME</b></a>
+        </li>
+        <li class="link">
+          <a href="aboutus.html"><b>ABOUT US</b></a>
+        </li>
+        <li class="link">
+          <a href="explore.html"><b>EXPLORE</b></a>
+        </li>
+        <li class="link">
+          <a href="services.html"><b>SERVICES</b></a>
+        </li>
+        <li class="link">
+          <a href="../Hero+Navbar/hero.html#review"><b>REVIEWS</b></a>
+        </li>
+      </ul>
+
+      <div class="right">
+        <div class="bag">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-bag-check"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z"
+            />
+            <path
+              d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"
+            />
+          </svg>
+        </div>
+        <button class="login">LOGIN</button>
+        <button class="signup">SIGN UP</button>
+        <div class="user">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-person-circle"
+            viewBox="0 0 16 16"
+            id="userprof"
+          >
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path
+              fill-rule="evenodd"
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+            />
+          </svg>
+        </div>
+        <div class="logout-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-box-arrow-right"
+            viewBox="0 0 16 16"
+            id="logout-button"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
+            />
+          </svg>
+        </div>
+      </div>
+    </nav>
+
+    <section class="gallery-section">
+      <div class="gallery-header">
+        <h1>Our Bakery Gallery</h1>
+        <p>A visual journey through our delicious creations</p>
+      </div>
+      
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="cakes">Cakes</button>
+        <button class="filter-btn" data-filter="pastries">Pastries</button>
+        <button class="filter-btn" data-filter="cookies">Cookies</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+      </div>
+      
+      <div class="gallery-grid">
+        <!-- Gallery Item 1 -->
+        <div class="gallery-item" data-category="cakes">
+          <img src="../Cake Pics/gallery1.jpg" alt="Wedding Cake">
+          <div class="gallery-overlay">
+            <h3>Elegant Wedding Cake</h3>
+            <p>Three-tier vanilla cake with fresh flowers</p>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 2 -->
+        <div class="gallery-item" data-category="cakes">
+          <img src="../Cake Pics/gallery2.jpg" alt="Birthday Cake">
+          <div class="gallery-overlay">
+            <h3>Colorful Birthday Cake</h3>
+            <p>Rainbow layered cake with buttercream</p>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 3 -->
+        <div class="gallery-item" data-category="pastries">
+          <img src="../Cake Pics/gallery3.jpg" alt="French Pastries">
+          <div class="gallery-overlay">
+            <h3>French Pastry Selection</h3>
+            <p>Assortment of croissants and danishes</p>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 4 -->
+        <div class="gallery-item" data-category="cookies">
+          <img src="../Cake Pics/gallery4.jpg" alt="Cookie Box">
+          <div class="gallery-overlay">
+            <h3>Gourmet Cookie Box</h3>
+            <p>Assorted flavors with custom decoration</p>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 5 -->
+        <div class="gallery-item" data-category="events">
+          <img src="../Cake Pics/gallery5.jpg" alt="Corporate Event">
+          <div class="gallery-overlay">
+            <h3>Corporate Event Setup</h3>
+            <p>Dessert table for 150 guests</p>
+          </div>
+        </div>
+        
+        <!-- Gallery Item 6 -->
+        <div class

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Kago's E-Bakery</title>
+    <link rel="shortcut icon" href="../Cake Pics/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="hero.css" />
+    <style>
+      /* Internal CSS for Services Page */
+
+      .services-section {
+        padding: 80px 50px;
+        background-color: #f9f5f0; /* Light background for the section */
+        min-height: calc(100vh - 200px); /* Adjust based on actual header/footer height */
+      }
+
+      .services-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .services-header h1 {
+        font-size: 48px;
+        color: #302121;
+        margin-bottom: 20px;
+      }
+
+      .services-header p {
+        font-size: 20px;
+        color: #666;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.5;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .service-card-large {
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .service-card-large:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .service-card-large .service-icon {
+        font-size: 60px;
+        color: #302121;
+        margin-bottom: 25px;
+      }
+
+      .service-card-large h2 {
+        font-size: 28px;
+        color: #302121;
+        margin-bottom: 15px;
+      }
+
+      .service-card-large p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 25px;
+        flex-grow: 1; /* Allows paragraph to take available space */
+      }
+
+      .service-card-large .service-features {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 30px;
+        text-align: left;
+      }
+
+      .service-card-large .service-features li {
+        font-size: 15px;
+        color: #444;
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 25px;
+      }
+
+      .service-card-large .service-features li::before {
+        content: '\f00c'; /* FontAwesome check icon */
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        position: absolute;
+        left: 0;
+        color: #28a745; /* Green checkmark */
+      }
+
+      .service-card-large .service-btn {
+        padding: 12px 25px;
+        background: #302121;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        transition: background 0.3s ease, transform 0.3s ease;
+      }
+
+      .service-card-large .service-btn:hover {
+        background: #462f2f;
+        transform: translateY(-3px);
+      }
+
+      .service-testimonials {
+        text-align: center;
+        margin-top: 80px;
+        padding: 60px 0;
+        background-color: #eeddcc;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .service-testimonials h2 {
+        font-size: 36px;
+        color: #302121;
+        margin-bottom: 40px;
+      }
+
+      .testimonial-slider {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap; /* Allows testimonials to wrap on smaller screens */
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .testimonial {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        width: 45%; /* Adjust width for two columns */
+        min-width: 300px; /* Minimum width for single column */
+        text-align: left;
+      }
+
+      .testimonial p {
+        font-style: italic;
+        color: #444;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+
+      .testimonial .client-info {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .testimonial .client-info img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #eeddcc;
+      }
+
+      .testimonial .client-info span {
+        font-weight: bold;
+        color: #302121;
+        font-size: 18px;
+      }
+
+      .service-cta {
+        text-align: center;
+        margin-top: 80px;
+        padding: 60px 0;
+        background: #302121;
+        color: white;
+        border-radius: 10px;
+      }
+
+      .service-cta h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+      }
+
+      .service-cta p {
+        font-size: 18px;
+        margin-bottom: 30px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.5;
+      }
+
+      .cta-btn {
+        padding: 15px 40px;
+        background: #eeddcc;
+        color: #302121;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease, transform 0.3s ease;
+      }
+
+      .cta-btn:hover {
+        background: white;
+        transform: translateY(-3px);
+      }
+
+      /* Pop-up Modal Styles */
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 10; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 30px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 900px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .close-button {
+        color: #aaa;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close-button:hover,
+      .close-button:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .modal-content h3 {
+        color: #302121;
+        font-size: 32px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .modal-iframe {
+        width: 100%;
+        height: 400px; /* Adjust height as needed */
+        border: none;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
+
+      .modal-text {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 80%;
+        max-width: 500px;
+        margin-top: 20px;
+      }
+
+      .contact-form input[type="text"],
+      .contact-form input[type="email"],
+      .contact-form textarea {
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .contact-form textarea {
+        resize: vertical;
+        min-height: 100px;
+      }
+
+      .contact-form button {
+        padding: 12px 25px;
+        background: #302121;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        transition: background 0.3s ease;
+      }
+
+      .contact-form button:hover {
+        background: #462f2f;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="background">
+      <img class="bg1-img" src="../Hero+Navbar/BG.png" alt="" />
+    </div>
+    <nav class="navbar">
+      <div class="top-left">
+        <img class="logo-img" src="Logo.png" alt="" />
+        <div class="logo">
+          <a href="../Hero+Navbar/hero.html"><u>KAGO'S E-BAKERY</u></a>
+        </div>
+      </div>
+      <ul class="link-group">
+        <li class="link">
+          <a href="../Hero+Navbar/hero.html"><b>HOME</b></a>
+        </li>
+        <li class="link">
+          <a href="about us.html"><b>ABOUT US</b></a>
+        </li>
+        <li class="link">
+          <a href="explore.html"><b>EXPLORE</b></a>
+        </li>
+        <li class="linkactive">
+          <a href="services.html"><b>SERVICES</b></a>
+        </li>
+		 <li class="linkactive">
+                <a href="shop.html"><b>SHOP</b></a> </li>
+        <li class="link">
+          <a href="../Hero+Navbar/hero.html#review"><b>REVIEWS</b></a>
+        </li>
+      </ul>
+
+    
+       
+    
+        
+    </nav>
+
+    <section class="services-section">
+      <div class="services-header">
+        <h1>Our Premium Services</h1>
+        <p>Beyond just delicious baked goods, we offer complete solutions for your sweet needs</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card-large">
+          <div class="service-icon">
+            <i class="fas fa-birthday-cake"></i>
+          </div>
+          <h2>Custom Cake Design</h2>
+          <p>Work with our expert cake designers to create the perfect custom cake for your special occasion. From weddings to birthdays, we'll bring your vision to life.</p>
+          <ul class="service-features">
+            <li>Free consultation</li>
+            <li>3D and themed designs</li>
+            <li>Various size options</li>
+            <li>Special dietary options</li>
+          </ul>
+          <button class="service-btn" data-service="custom-cake">Learn More</button>
+        </div>
+        
+        <div class="service-card-large">
+          <div class="service-icon">
+            <i class="fas fa-truck"></i>
+          </div>
+          <h2>Nationwide Delivery</h2>
+          <p>We deliver our fresh baked goods anywhere in Botswana with our specialized delivery system that ensures your order arrives in perfect condition.</p>
+          <ul class="service-features">
+            <li>Same-day delivery in Gaborone</li>
+            <li>Next-day delivery nationwide</li>
+            <li>Temperature-controlled vehicles</li>
+            <li>Real-time tracking</li>
+          </ul>
+          <button class="service-btn" data-service="delivery">Delivery Areas</button>
+        </div>
+        
+        
+        <div class="service-card-large">
+          <div class="service-icon">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <h2>Corporate Catering</h2>
+          <p>Impress your clients and employees with our premium corporate catering services. Perfect for meetings, events, and employee appreciation.</p>
+          <ul class="service-features">
+            <li>Custom menus</li>
+            <li>Branded packaging</li>
+            <li>Dietary requirement options</li>
+            <li>Bulk order discounts</li>
+          </ul>
+          <button class="service-btn" data-service="corporate-catering">Request Quote</button>
+        </div>
+      </div>
+      
+      <div class="service-testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-slider">
+          <div class="testimonial">
+            <p>"The custom cake for our wedding was beyond perfect! The team listened to all our requests and delivered a stunning creation."</p>
+            <div class="client-info">
+              <img src="../Images/client1.jpg" alt="Amanda K.">
+              <span>Amanda K.</span>
+            </div>
+          </div>
+          <div class="testimonial">
+            <p>"Our office has been using their corporate catering for months - always fresh, delicious, and on time!"</p>
+            <div class="client-info">
+              <img src="../Images/client2.jpeg" alt="Tebogo M.">
+              <span>Tebogo M.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="service-cta">
+        <h2>Ready to Experience Our Services?</h2>
+        <p>Contact us today to discuss your needs and how we can make your next event special</p>
+        <button class="cta-btn" id="contactUsBtn">Contact Us</button>
+      </div>
+    </section>
+
+    <section id="footer" class="section-p1">
+      <div class="col">
+        <div class="foot-con">
+          <img src="../Cake Pics/logo.png" alt="" style="width: 130px" />
+        </div>
+
+        <div class="follow">
+          <h4>Follow Us</h4>
+          <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col1">
+        <div class="contact-col">
+          <h4>Contact Us</h4>
+          <p><strong>Address: </strong> 879 Rapo Road,Street 32,Gaborone,Botswana</p>
+          <p><strong>Phone: </strong> +267 74 456 345</p>
+          <p><strong>Service Time: </strong> 10.00am-10.00pm, Mon-Sat</p>
+        </div>
+      </div>
+
+      <div class="col1">
+        <h4>About Us</h4>
+        <a href="aboutus.html">About Us</a>
+        <a href="services.html">Our Services</a>
+        <a href="#footer">Connect With Us</a>
+      </div>
+
+      <div class="col2">
+        <h4>My Account</h4>
+        
+        <a href="../cartspage/index.html">Wishlists</a>
+        <a href="../cartspage/index.html">View Cart</a>
+      </div>
+    </section>
+
+    <div class="copyright">
+      <p>Made by KAGO GWAPELA AND TEAM, ALL rights reserved</p>
+    </div>
+
+    <div id="serviceModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <iframe id="modalIframe" class="modal-iframe" frameborder="0" allowfullscreen></iframe>
+        <p id="modalText" class="modal-text"></p>
+      </div>
+    </div>
+
+    <div id="contactModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h3>Contact Us</h3>
+        <p class="modal-text">Fill out the form below and we'll get back to you shortly!</p>
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="hero.js"></script>
+    <script>
+      // Get the modals
+      const serviceModal = document.getElementById('serviceModal');
+      const contactModal = document.getElementById('contactModal');
+
+      // Get the buttons that open the modals
+      const serviceBtns = document.querySelectorAll('.service-btn');
+      const contactUsBtn = document.getElementById('contactUsBtn');
+
+      // Get the <span> element that closes the modal
+      const closeButtons = document.querySelectorAll('.close-button');
+
+      // Get modal content elements
+      const modalTitle = document.getElementById('modalTitle');
+      const modalIframe = document.getElementById('modalIframe');
+      const modalText = document.getElementById('modalText');
+	  
+
+
+      // Define content for each service
+      const serviceContent = {
+        'custom-cake': {
+          title: 'Custom Cake Design Service',
+          video: 'https://www.youtube.com/shorts/PAxGevZubdM', // Example YouTube video ID
+          text: 'Bring your wildest cake dreams to life! Our expert designers work with you to create a unique masterpiece for any occasion, from elaborate wedding cakes to whimsical birthday creations. We handle everything from concept to delivery, ensuring your cake is as delicious as it is beautiful. Dietary restrictions and specific themes are happily accommodated.'
+        },
+        'delivery': {
+          title: 'Nationwide Delivery Service',
+          video: 'https://youtu.be/rGgkmWfSPUU?si=n-WIpDNDxOLn3pSo', // Example delivery video
+          text: 'Enjoy Kago\'s E-Bakery delights anywhere in Botswana! Our specialized, temperature-controlled delivery ensures your order arrives fresh and perfect, no matter the distance. We offer same-day delivery in Gaborone and reliable next-day service across the nation. Track your order in real-time and relax, knowing your treats are on their way.'
+        },
+        'subscription': {
+          title: 'Bakery Subscription Service',
+          video: 'https://youtube.com/shorts/BDPIhb-nrhA?si=RVeQJybTUpWFx_AD', // Example subscription box video
+          text: 'Never miss out on your favorite Kago\'s E-Bakery treats with our convenient subscription service! Choose from weekly or monthly deliveries, customize your boxes with a variety of baked goods, and enjoy exclusive discounts. It\'s the perfect way to keep your pantry stocked with fresh, delicious pastries without lifting a finger. Plus, you can pause or cancel anytime!'
+        },
+        'corporate-catering': {
+          title: 'Corporate Catering Services',
+          video: 'https://www.youtube.com/shorts/NpGOParg6yI', // Example corporate event catering
+          text: 'Elevate your corporate events and impress clients with our premium catering services. From delightful breakfast pastries for morning meetings to elaborate dessert spreads for gala events, we offer custom menus tailored to your needs. Enjoy branded packaging and flexible options for dietary requirements, along with attractive bulk order discounts for any size gathering.'
+        }
+      };
+
+      // Function to open service modal
+      serviceBtns.forEach(btn => {
+        btn.onclick = function() {
+          const serviceType = this.dataset.service;
+          const content = serviceContent[serviceType];
+
+          if (content) {
+            modalTitle.textContent = content.title;
+            modalIframe.src = content.video;
+            modalText.textContent = content.text;
+            serviceModal.style.display = 'flex';
+          }
+        }
+      });
+
+      // Function to open contact modal
+      contactUsBtn.onclick = function() {
+        contactModal.style.display = 'flex';
+      }
+
+      // Function to close modals
+      closeButtons.forEach(btn => {
+        btn.onclick = function() {
+          serviceModal.style.display = 'none';
+          contactModal.style.display = 'none';
+          modalIframe.src = ''; // Stop video playback
+        }
+      });
+
+      // Close the modal when clicking outside of it
+      window.onclick = function(event) {
+        if (event.target == serviceModal) {
+          serviceModal.style.display = 'none';
+          modalIframe.src = ''; // Stop video playback
+        }
+        if (event.target == contactModal) {
+          contactModal.style.display = 'none';
+        }
+      }
+
+      // Handle form submission for contact form
+      const contactForm = document.querySelector('.contact-form');
+      contactForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+        alert('Thank you for your message! We will get back to you soon.'); // Simple alert for demo
+        contactModal.style.display = 'none'; // Close modal after submission
+        contactForm.reset(); // Clear the form
+      });
+    </script>
+  </body>
+</html>

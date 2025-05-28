@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop - Kago's E-Bakery</title>
+    <link rel="shortcut icon" href="../Cake Pics/logo.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="hero.css" />
+  </head>
+
+  <body>
+    <div class="background">
+      <img class="bg1-img" src="../Hero+Navbar/BG.png" alt="" />
+    </div>
+    <nav class="navbar">
+      <div class="top-left">
+        <img class="logo-img" src="Logo.png" alt="" />
+        <div class="logo">
+          <a href="../Hero+Navbar/hero.html"><u>KAGO'S E-BAKERY</u></a>
+        </div>
+      </div>
+      <ul class="link-group">
+        <li class="link">
+          <a href="../Hero+Navbar/hero.html"><b>HOME</b></a>
+        </li>
+        <li class="link">
+          <a href="aboutus.html"><b>ABOUT US</b></a>
+        </li>
+        <li class="link">
+          <a href="explore.html"><b>EXPLORE</b></a>
+        </li>
+        <li class="link">
+          <a href="services.html"><b>SERVICES</b></a>
+        </li>
+        <li class="link">
+          <a href="../Hero+Navbar/hero.html#review"><b>REVIEWS</b></a>
+        </li>
+      </ul>
+
+      <div class="right">
+        <div class="bag">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-bag-check"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0z"
+            />
+            <path
+              d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"
+            />
+          </svg>
+        </div>
+        <button class="login">LOGIN</button>
+        <button class="signup">SIGN UP</button>
+        <div class="user">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-person-circle"
+            viewBox="0 0 16 16"
+            id="userprof"
+          >
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+            <path
+              fill-rule="evenodd"
+              d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+            />
+          </svg>
+        </div>
+        <div class="logout-button">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-box-arrow-right"
+            viewBox="0 0 16 16"
+            id="logout-button"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"
+            />
+          </svg>
+        </div>
+      </div>
+    </nav>
+
+    <section class="shop-section">
+      <div class="shop-header">
+        <h1>Our Delicious Creations</h1>
+        <p>Freshly baked with love every day</p>
+      </div>
+      
+      <div class="shop-filters">
+        <button class="filter-btn active">All Products</button>
+        <button class="filter-btn">Cakes</button>
+        <button class="filter-btn">Pastries</button>
+        <button class="filter-btn">Cookies</button>
+        <button class="filter-btn">Seasonal</button>
+      </div>
+      
+      <div class="shop-grid">
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="product-badge">Bestseller</div>
+          <div class="product-img">
+            <img src="../Cake Pics/Cake-with-a-Black-Forest-Flavour.jpeg" alt="Choco Lava Cake">
+          </div>
+          <div class="product-details">
+            <h3>Choco Lava Cake</h3>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>(128)</span>
+            </div>
+            <p class="product-desc">Rich chocolate cake with a molten center, served warm.</p>
+            <div class="product-price">
+              <span class="price">P699.00</span>
+              <span class="original-price">P799.00</span>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="product-badge">New</div>
+          <div class="product-img">
+            <img src="../Cake Pics/white forest.jpg" alt="White Forest Cake">
+          </div>
+          <div class="product-details">
+            <h3>White Forest Cake</h3>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span>(95)</span>
+            </div>
+            <p class="product-desc">Vanilla sponge with white chocolate and cherry filling.</p>
+            <div class="product-price">
+              <span class="price">P649.00</span>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="product-img">
+            <img src="../Cake Pics/butterscotch.jpg" alt="Butterscotch Cake">
+          </div>
+          <div class="product-details">
+            <h3>Butterscotch Cake</h3>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(142)</span>
+            </div>
+            <p class="product-desc">Caramel-flavored cake with butterscotch chips.</p>
+            <div class="product-price">
+              <span class="price">P399.00</span>
+              <span class="original-price">P499.00</span>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        
+        <!-- Product 4 -->
+        <div class="product-card">
+          <div class="product-badge">Limited</div>
+          <div class="product-img">
+            <img src="../Cake Pics/download.jpeg" alt="Red Velvet Cake">
+          </div>
+          <div class="product-details">
+            <h3>Red Velvet Cake</h3>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <span>(210)</span>
+            </div>
+            <p class="product-desc">Classic red velvet with cream cheese frosting.</p>
+            <div class="product-price">
+              <span class="price">P599.00</span>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        
+        <!-- Product 5 -->
+        <div class="product-card">
+          <div class="product-img">
+            <img src="../Cake Pics/choco.jfif" alt="Choco Balls">
+          </div>
+          <div class="product-details">
+            <h3>Choco Balls (6pc)</h3>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+              <span>(87)</span>
+            </div>
+            <p class="product-desc">Chocolate truffles with various fillings.</p>
+            <div class="product-price">
+              <span class="price">P79.00</span>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+        
+        <!-- Product 6 -->
+        <div class="product-card">
+          <div class="product-badge">Popular</div>
+          <div class="product-img">
+            <img src="../Cake Pics/valentines-day-puff-pastry-hearts-image.jpg" alt="Strawberry Pastry">
+          </div>
+          <div class="product-details">
+            <h3>Strawberry Pastry</h3>
+            <div class="product-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <span>(76)</span>
+            </div>
+            <p class="product-desc">Flaky pastry with fresh strawberries and cream.</p>
+            <div class="product-price">
+              <span class="price">P99.00</span>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="shop-cta">
+        <h2>Custom Cakes for Special Occasions</h2>
+        <p>Celebrate your special moments with our custom-designed cakes</p>
+        <button class="custom-order-btn">Order Custom Cake</button>
+      </div>
+    </section>
+
+    <section id="footer" class="section-p1">
+      <!-- Footer content same as hero.html -->
+    </section>
+
+    <div class="copyright">
+      <p>Made by KAGO GWAPELA AND TEAM, ALL rights reserved</p>
+    </div>
+    <script src="hero.js"></script>
+  </body>
+</html>
